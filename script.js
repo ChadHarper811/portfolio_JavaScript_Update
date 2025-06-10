@@ -59,7 +59,7 @@ const data = [
         href: "https://github.com/ChadHarper811/BookMaster",
         thumbnail: "Pictures/BookMaster/BookMaster.png",
         title: "BookMaster React App",
-        languages: ["React", "Bootsrtap", "Java", "SpringBoot", "MySQL" ],
+        languages: ["React", "Bootstrap", "Java", "SpringBoot", "MySQL" ],
         date: "1/22/24",
         purpose: "LaunchCode Group Project",
         images: ["Pictures/BookMaster/BookMaster.png", "Pictures/BookMaster/BookMaster 1.png", "Pictures/BookMaster/BookMaster 2.png", "Pictures/BookMaster/BookMaster 3.png", "Pictures/BookMaster/BookMaster 4.png", "Pictures/BookMaster/BookMaster 5.png", "Pictures/BookMaster/BookMaster 6.png", "Pictures/BookMaster/BookMaster 7.png"],
