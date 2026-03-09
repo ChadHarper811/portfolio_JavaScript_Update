@@ -10,94 +10,98 @@
 </head>
 <body>
 
-    <nav class="nav">
-        <ul  id="navbar" class="navbar">
-            <li>
-                <a href="#welcomeSection">Home</a>
-            </li>
-            <li>
-                <a href="#aboutMeSection">About</a>
-            </li>
-            <li>
-                <a href="#projectsSection">Work</a>
-            </li>
-            <li>
-                <a href="#contactSection">Contact</a>
-            </li>
-        </ul>
-    </nav>
+    <section id="background">
+        <nav class="nav">
+            <ul  id="navbar" class="navbar">
+                <li>
+                    <a href="#welcomeSection">Home</a>
+                </li>
+                <li>
+                    <a href="#aboutMeSection">About</a>
+                </li>
+                <li>
+                    <a href="#projectsSection">Work</a>
+                </li>
+                <li>
+                    <a href="#contactSection">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-    <section id="welcomeSection" class="welcomeSection">
-        <div class="welcomeSectionText">
-           <h1>Welcome to my page,<br>My name is Chad Harper</h1>
-            <h3>an up-and-coming junior web dev</h3> 
+        <section id="welcomeSection" class="welcomeSection">
+            <div class="welcomeSectionText">
+                <h1 class="textShadowLarge">Welcome, I am <br>Chad Harper <br>Software Engineer</h1>
+                <p class="textShadowSmall">with a focus on Full Stack Web Development</p>
+            </div>
+            <div>
+                <img src="./Pictures/Headshot.jpg" alt="headshot of Chad Harper" class="headshot">
+            </div>
+        </section>
+
+        <section id="aboutMeSection" class="aboutMeSection">
+            <h2>My Journey so far...</h2>
+            <p class="aboutMeSectionText">My coding journey started in high school when I took HTML my junior year. I learned the basics and even started a Photoshop club with my friends for fun. After that I honestly didn't touch coding again until one of my friends changed careers into coding. I started learning on my own for a while before I looked into some schooling and bootcamps.  I applied to a couple bootcamps and was referred to <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a> to start learning on my own. I also relearned HTML and CSS with the help of <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a> where this project you are currently looking at was started. I keep updating it as I learn more to improve its look and over feel.  After that I started my real journey with <a href="https://www.launchcode.org/" target="_blank"> Launch_Code</a> in the beginning of 2023 and finished the course in February 2024. I now have multiple certificates including:<br>
+                Launch_Code: <span id="LaunchCodeCert" class="certificate">Web Development Course Certificate</span> Feb 2023<br>
+                freeCodeCamp: <span id="freeCodeCampRWDCert" class="certificate">Responsive Web Design Certificate (RWD Cert.)</span>  March 2024 <br>
+                freeCodeCamp: <span id="freeCodeCampJSADSCert" class="certificate">JavaScript Algorithms and Data Structures Certificate (JSADS Cert.)</span> Jan 2025
+            </p>
+        </section>
+
+        <section id="projectsSection" class="projectsSection">
+
+            <h2 class="textShadowLarge">These are some of my projects</h2>
+
+            <div id="projects" class="projects">
+                <!-- projects added here -->
+            </div>
+        </section>
+
+        </div>
+        <!-- Modal for image full screen -->
+        <div id="modal-container">
+            <div id="modal">
+                <!-- Close button -->
+                <div class="closeBtn">&times;</div>
+                <!-- Modal image -->
+                <img id="modalImg">
+            </div>
+        </div>
+
+        <!-- Modal for full screen gallery images -->
+        <div id="gallery-container" class="gallery-container">
+            <div id="gallery" class="fade">
+                <!-- Slide Number -->
+                <div id="slide-number" class="slideNum"></div>
+                <!-- image dots-->
+                <div id="dots"></div>
+                <!-- Site link -->
+                <div id="site-link" class="link"></div>
+                <!-- Coding link -->
+                <div id="code-link" class="link"></div>
+                <!-- Close button -->
+                <div class="closeBtn">&times;</div>
+                <!--Gallery images & numbers-->
+                <div id="gallery-imgs"></div>
+                <!-- gallery prev/next buttuns-->
+                <span id="prev"><</span>
+                <span id="next">></span>
+
+            </div>
+        </div>
+
+        <section id="contactSection" class="contactSection">
+            <h1>How to get in touch</h1>
             
-        </div>
+            <div id="contactLinks" class="contactLinks">
+                <!-- Contact links -->
+            </div>
+
+        </section>
+
+        <footer>
+            <p> **This is a project Completed for: <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a> <br> &copy; Harper Productions</p>
+        </footer>
     </section>
-
-    <section id="aboutMeSection" class="aboutMeSection">
-        <h1>My Journey so far...</h1>
-        <h3 class="aboutMeSectionText">My coding journey started in high school when I took HTML my junior year. I learned the basics and even started a Photoshop club with my friends for fun. After that I honestly didn't touch coding again until one of my friends changed careers into coding. I started learning on my own for a while before I looked into some schooling and bootcamps.  I applied to a couple bootcamps and was referred to <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a> to start learning on my own. I also relearned HTML and CSS with the help of <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a> where this project you are currently looking at was started. I keep updating it as I learn more to improve its look and over feel.  After that I started my real journey with <a href="https://www.launchcode.org/" target="_blank"> Launch_Code</a> in the beginning of 2023 and finished the course in February 2024. I now have multiple certificates including:<br>
-            Launch_Code: <span id="LaunchCodeCert" class="certificate">Web Development Course Certificate</span> Feb 2023<br>
-            freeCodeCamp: <span id="freeCodeCampRWDCert" class="certificate">Responsive Web Design Certificate (RWD Cert.)</span>  March 2024 <br>
-            freeCodeCamp: <span id="freeCodeCampJSADSCert" class="certificate">JavaScript Algorithms and Data Structures Certificate (JSADS Cert.)</span> Jan 2025
-        </h3>
-    </section>
-
-    <section id="projectsSection" class="projectsSection">
-
-        <h1>These are some of my projects</h1>
-
-        <div id="projects" class="projects">
-            <!-- projects added here -->
-        </div>
-    </section>
-
-    </div>
-    <!-- Modal for image full screen -->
-    <div id="modal-container">
-        <div id="modal">
-            <!-- Close button -->
-            <div class="closeBtn">&times;</div>
-            <!-- Modal image -->
-            <img id="modalImg">
-        </div>
-    </div>
-
-    <!-- Modal for full screen gallery images -->
-    <div id="gallery-container" class="gallery-container">
-        <div id="gallery" class="fade">
-            <!-- Slide Number -->
-            <div id="slide-number" class="slideNum"></div>
-            <!-- image dots-->
-            <div id="dots"></div>
-            <!-- Site link -->
-            <div id="site-link" class="link"></div>
-            <!-- Coding link -->
-            <div id="coding-link" class="link"></div>
-            <!-- Close button -->
-            <div class="closeBtn">&times;</div>
-            <!--Gallery images & numbers-->
-            <div id="gallery-imgs"></div>
-            <!-- gallery prev/next buttuns-->
-            <span id="prev"><</span>
-            <span id="next">></span>
-
-        </div>
-    </div>
-
-    <section id="contactSection" class="contactSection">
-        <h1>How to get in touch</h1>
-        
-        <div id="contactLinks" class="contactLinks">
-            <!-- Contact links -->
-        </div>
-
-    </section>
-
-    <footer>
-        <p> **This is a project Completed for: <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a> <br> &copy; Harper Productions</p>
-    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

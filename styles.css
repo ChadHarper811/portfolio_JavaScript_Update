@@ -1,9 +1,10 @@
 :root {
     --modal: rgba(0,0,0,0.8);
-    --blue: #092B40;
-    --light_gray: #696969;
+    --black: #080808;
+    --blue: #002933;
+    --light_gray: #B7B7B7;
     --gray: #3a3e43;
-    --orange: #c96700;
+    --orange: #FA8416;
     --white: #f0f0f0;
     --off_white: #d6d6d6;
     --email-icon: #d1d1d1;
@@ -19,23 +20,65 @@
 }
 
 html {
+    box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 8vh;
+    font-size: 62.5%;
 }
 
 body {
-    font-family: 'Nova Square', sans-serif;
+    font-family: 'Nova Square', Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
     color: var(--white);
     justify-content: center;
     text-align: center;
     display: block;
     margin: 0;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Pictures/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top;
 }
+
 
 .stop-scrolling {
     height: 100%;
     overflow-y: hidden;
 }
+
+/* Typography */
+
+h1 {
+    font-size: 7rem;
+    color: var(--orange);
+}
+
+h2 {
+    font-size: 6rem;
+    color: var(--orange);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.5rem;
+}
+
+.textShadowSmall {
+    text-shadow: 2px 2px 2px black;
+}
+
+.textShadowLarge {
+    text-shadow: 3px 3px 3px black;
+}
+
+/* Nav Bar Styling */
 
 #navbar {
     list-style-type: none;
@@ -47,46 +90,52 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    width: 100vw;
+    width: 100%;
 }
 
 #navbar li a {
-    font-size: 25px;
-    color: var(--white);
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bold;
     text-align: center;
     padding: 20px 24px;
     text-decoration: none;
     float: left;
 }
 
-li a:hover {
-    background-color: var(--light_gray);
-}
-
-h1 {
-    font-size: 65px;
+#navbar li a:hover {
     color: var(--orange);
+    background-color: var(--blue);
+    font-weight: normal;
 }
 
-.welcomeSectionText > h3, .aboutMeSection > h3 {
-    font-size: 25px;
-}
-
-P {
-    font-size: 14px;
-}
+/* Welcome Section Styling */
 
 .welcomeSection {
-    min-height: 100vh;
-    background-image: url(Pictures/background.jpg);
-    background-size: cover;
-    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    padding-top: 10vh;
+    justify-content: center;
 }
 
-.welcomeSectionText {
-    padding-top: 40vh;
-    text-shadow: 3px 3px 3px black;
+.welcomeSection img {
+    margin: 30px;
+    padding-top: 50px;
+    width: 200px;
+    border-radius: 30% 0;
 }
+
+.welcomeSectionText * {
+    margin: 0;
+    justify-content: center;
+}
+
+.welcomeSection h1 {
+    text-align: end;
+}   
+
+/* About Me Section styling */
 
 .aboutMeSection {
     min-height: 77vh;
@@ -94,23 +143,22 @@ P {
     padding: 10vh 5vw 5vh 5vw;
 }
 
-.certificate {
+.aboutMeSection a:link, .aboutMeSection a:visited, .certificate  {
+    text-decoration: none;
     color: var(--light_gray);
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
-.certificate:hover {
+.aboutMeSection a:hover, .certificate:hover {
     color: var(--orange);
     transition: .6s ease;
 }
 
-.projects a:link, a:visited {
-    color: var(--light_gray);
-}
+/* Projects Section styling */
 
 .projectsSection {
     min-height: 77vh;
-    background-color: var(--gray);
     padding: 1px 20px 50px 20px;
 }
 
@@ -121,14 +169,22 @@ P {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    max-width: 1500px;
 }
 
 .project-tile {
-    color: var(--light_gray);
-    border-radius: 3px;
+    color: var(--blue);
+    border-radius: 5px;
     padding: 10px;
     background-color: var(--off_white);
+    background-blend-mode:overlay;
+    background-image: url(Pictures/polaroid.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top;
+}
+
+.project-tile p {
+    font-size: 1.6rem;
 }
 
 .project-tile:hover  {
@@ -140,7 +196,7 @@ P {
 }
 
 .project-tile > h3 > .hover {
-    color: var(--off_white);
+    color: transparent;
 }
 
 .project-tile:hover  > h3 > .hover {
@@ -158,6 +214,8 @@ P {
     display: inline-block;
     margin: 0px 0px 0px 0px;
 }
+
+/* Modal styling */
 
 #modal-container, #gallery-container {
     display: none;
@@ -255,7 +313,7 @@ P {
 }
 
 #prev, #next {
-    background-color: var(--light_gray);
+    background-color: var(--blue);
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -279,13 +337,18 @@ P {
 }
 
 #prev:hover, #next:hover {
-    color: var(--gray);
+    color: var(--blue);
     background-color: var(--orange);
 }
 
 .link {
     position: absolute;
     top: -25px;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--white);
 }
 
 .link > a:hover, .link > a:hover .hover {
@@ -297,13 +360,15 @@ P {
     left: 10vw;
 }
 
-#coding-link {
+#code-link {
     right: 10vw;
 }
 
 .hover {
-    color: var(--modal);
+    color: transparent;
 }
+
+/* Contact section */
 
 .contacts {
     position: relative;
@@ -319,7 +384,7 @@ P {
     border-radius: 3px;
 }
 
-a:link, a:visited {
+.contactSection a:link, .contactSection a:visited {
     color: var(--white);
     text-decoration: none;
 }
@@ -374,6 +439,8 @@ a:link, a:visited {
     padding: 20vh 5vw 1vh 5vw;
 }
 
+/* Footer */
+
 footer {
     min-height: 7vh;
     width: 100%;
@@ -400,7 +467,7 @@ footer {
         left: 12vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 12vw;
     }
     
@@ -424,7 +491,7 @@ footer {
         left: 15vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 11vw;
     }
 
@@ -464,7 +531,7 @@ footer {
         left: 14vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 11vw;
     }
 
@@ -504,7 +571,7 @@ footer {
         left: 13vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 9vw;
     }
     #dots {
@@ -543,7 +610,7 @@ footer {
         left: 13vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 9vw;
     }
 
@@ -580,7 +647,7 @@ footer {
         font-size: 15px;
     }
 
-    #coding-link {
+    #code-link {
         right: 8vw;
     }
 
@@ -617,7 +684,7 @@ footer {
         left: 9vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 7vw;
     }
 
@@ -653,7 +720,7 @@ footer {
         left: 10vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 8vw;
     }
 
@@ -689,7 +756,7 @@ footer {
         left: 9vw;
     }
 
-    #coding-link {
+    #code-link {
         right: 6vw;
     }
 

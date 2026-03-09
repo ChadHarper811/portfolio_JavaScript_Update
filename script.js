@@ -205,7 +205,7 @@ const galleryImgs = document.getElementById("gallery-imgs");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next")
 const siteLink = document.getElementById("site-link");
-const codingLink = document.getElementById("coding-link");
+const codeLink = document.getElementById("code-link");
 const contactLinks = document.getElementById("contactLinks");
 let slideIndex = 1;
 
@@ -227,11 +227,12 @@ data.filter(el => el.href).forEach(
             <img class="projectImg divEl" src="${thumbnail}" alt="${title}"/>
             <h3 class="divEl"> <span class="hover">&lt;</span> ${title} <span class="hover">&#47;&gt;</span> </h3>
             <div class="languages divEl">
-            ${languages.map((e) => 
+                ${languages.map((e) => 
                 `<p class="divLang">${e}</p>`
-            ).join(" | ")}
+                ).join(" | ")}
             </div>
-            <p class="divEl">Completed: ${date} For: ${purpose}</p>
+            <p class="divEl">Completed: ${date}</p>
+            <p class="divEl">For: ${purpose}</p>
         </div>
         `
     }
@@ -273,12 +274,12 @@ const galleryDisplay = (projectID) => {
 
         siteLink.innerHTML = 
         `
-        <a href="${data.filter(el => el.id === Number(projectID))[0].href}" > <span class="hover">&lt;</span>Site Link<span class="hover">&#47;&gt;</span> </a>
+        <a href="${data.filter(el => el.id === Number(projectID))[0].href}" target="_blank" > <span class="hover">&lt;</span>Site Link<span class="hover">&#47;&gt;</span> </a>
         `
 
-        codingLink.innerHTML = 
+        codeLink.innerHTML = 
         `
-        <a href="${data.filter(el => el.id === Number(projectID))[0].code}" > <span class="hover">&lt;</span>Code Link<span class="hover">&#47;&gt;</span> </a>
+        <a href="${data.filter(el => el.id === Number(projectID))[0].code}" target="_blank" > <span class="hover">&lt;</span>Code Link<span class="hover">&#47;&gt;</span> </a>
         `
         
     })
@@ -325,7 +326,7 @@ data.filter(el => el.icon).forEach(
     ({icon, link, text}) => {
         contactLinks.innerHTML += `
         <div id="${text}-link" class="contacts">
-            <a href="${link}" class="contact-details">
+            <a href="${link}" class="contact-details" target="_blank">
                  <i id="${text}-icon" class="${icon}"></i>${text}
             </a>
         </div>
@@ -343,7 +344,7 @@ const closeBtns = document.getElementsByClassName("closeBtn");
             dotsDiv.innerHTML = "";
             galleryImgs.innerHTML = "";
             siteLink.innerHTML = "";
-            codingLink.innerHTML = "";
+            codeLink.innerHTML = "";
             modal.style.display = "none";
             modalImg.src = "";
             document.body.classList.remove("stop-scrolling");
