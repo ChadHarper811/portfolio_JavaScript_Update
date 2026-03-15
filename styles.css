@@ -119,13 +119,6 @@ p {
     justify-content: center;
 }
 
-.welcomeSection img {
-    margin: 30px;
-    padding-top: 50px;
-    width: 200px;
-    border-radius: 30% 0;
-}
-
 .welcomeSectionText * {
     margin: 0;
     justify-content: center;
@@ -133,7 +126,29 @@ p {
 
 .welcomeSection h1 {
     text-align: end;
-}   
+}
+
+#headshot {
+    width: 200px;
+    height: 250px;
+    margin: 30px;
+    padding-top: 50px;
+    border-radius: 30% 0;
+    border: 10px solid rgba(214, 214, 214, 0.9);
+    background: url(./Pictures/Headshot.jpg) center / 215px auto padding-box;
+    overflow: hidden;
+} 
+
+
+#namePlate {
+    font-size: 3rem;
+    text-align: start;
+    background-color: rgba(214, 214, 214, 0.9);
+    mix-blend-mode: screen;
+    color: black;
+    width: 100%;
+    margin: 200px 0px 10px 0px;
+}
 
 /* About Me Section styling */
 
