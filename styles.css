@@ -35,8 +35,8 @@ body {
     display: block;
     margin: 0;
     background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: url(Pictures/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@ p {
     color: var(--black);
     font-weight: bold;
     text-align: center;
-    padding: 20px 24px;
+    padding: 2vh 4vw;
     text-decoration: none;
     float: left;
 }
@@ -125,7 +125,7 @@ p {
 }
 
 .welcomeSection h1 {
-    text-align: end;
+    text-align: start;
 }
 
 #headshot {
@@ -153,6 +153,7 @@ p {
 /* About Me Section styling */
 
 .aboutMeSection {
+    width: 100%;
     min-height: 77vh;
     background-color: var(--blue);
     padding: 10vh 5vw 5vh 5vw;
@@ -465,13 +466,9 @@ footer {
 
 /* Max Width Media Queries */
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     html {
         scroll-padding-top: 7.5vh;
-    }
-
-    #navbar li a {
-        padding: 10px 24px;
     }
 
     .welcomeSectionText {
@@ -491,7 +488,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 680px) {
+@media screen and (max-width: 680px) {
     .slideNum {
         top: 1px;
         font-size: 15px;
@@ -531,7 +528,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media screen and (max-width: 540px) {
     .slideNum {
         top: 2px;
         font-size: 13px;
@@ -571,46 +568,10 @@ footer {
     }
 }
 
-@media only screen and (max-width: 400px) {
-    .slideNum {
-        top: 3px;
-        font-size: 12px;
-    }
 
-    .link {
-        top: -22px;
-        font-size: 12px;
-    }
-
-    #site-link {
-        left: 13vw;
-    }
-
-    #code-link {
-        right: 9vw;
-    }
-    #dots {
-        top: -28px;
-    }
-
-    .dots {
-        margin: 0 -1px;
-        height: 6px;
-        width: 6px;
-    }
-
-    .closeBtn {
-        font-size: 34px;
-        top: -35px;
-    }
-
-    #prev, #next {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
-
-@media only screen and (max-width: 340px) {
+@media screen and (max-width: 400px) {
+    
+    
     .slideNum {
         top: 3px;
         font-size: 11px;
@@ -651,7 +612,8 @@ footer {
 }
 
 /* Max Height & landscape Media Queries */
-@media only screen and (max-height: 540px) and (orientation: landscape) {
+
+/* @media screen and (max-height: 540px) and (orientation: landscape) {
     .slideNum {
         top: 1px;
         font-size: 15px;
@@ -684,7 +646,7 @@ footer {
 }
 
 
-@media only screen and (max-height: 480px) and (orientation: landscape) {
+@media screen and (max-height: 480px) and (orientation: landscape) {
     .slideNum {
         top: 2px;
         font-size: 14px;
@@ -720,7 +682,7 @@ footer {
     }
 }
 
-@media only screen and (max-height: 380px) and (orientation: landscape) {
+@media screen and (max-height: 380px) and (orientation: landscape) {
     .slideNum {
         top: 3px;
         font-size: 13px;
@@ -756,7 +718,7 @@ footer {
     }
 }
 
-@media only screen and (max-height: 300px) and (orientation: landscape) {
+@media screen and (max-height: 300px) and (orientation: landscape) {
     .slideNum {
         top: 4px;
         font-size: 12px;
@@ -790,4 +752,4 @@ footer {
         padding: 11px;
         font-size: 14px;
     }
-}
+} */
